@@ -1,12 +1,12 @@
 #!/bin/bash
 #Installing PHP7.2
 echo "Installing PHP"
-yum -y install epel-release && \
-yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm && \
-yum -y install yum-utils && \
-yum-config-manager --enable remi-php72 && \
-yum -y update && \
-yum -y install php && \
+yum -y install epel-release >> /dev/null && \
+yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm >> /dev/null && \
+yum -y install yum-utils >> /dev/null && \
+yum-config-manager --enable remi-php72 >> /dev/null && \
+yum -y update >> /dev/null && \
+yum -y install php >> /dev/null && \
 yum -y install php-fpm php-gd php-json php-mbstring php-mysqlnd php-xml php-xmlrpc php-opcache >> /dev/null
 echo "Starting PHP"
 systemctl start php-fpm >> /dev/null
