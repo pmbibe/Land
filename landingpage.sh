@@ -21,6 +21,6 @@ echo "Installing Composer"
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" >> /dev/null
 sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer >> /dev/null
 echo "Composer is installed"
-curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash - >> /dev/null
+curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash - >> /dev/null
 sudo yum install nodejs -y >> /dev/null
 mkdir -p /srv/code_folder/public
